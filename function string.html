@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String & Math Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>JavaScript String Functions</h2>
+        <p>Examples of string methods:</p>
+        <pre id="stringOutput"></pre>
+        <button onclick="showStringFunctions()">Show String Functions</button>
+
+        <h2>JavaScript Math Functions</h2>
+        <p>Examples of math methods:</p>
+        <pre id="mathOutput"></pre>
+        <button onclick="showMathFunctions()">Show Math Functions</button>
+    </div>
+
+    <script>
+        function showStringFunctions() {
+            let text = " Hello, JavaScript! ";
+            let output = "";
+            output += "Original: '" + text + "'\n";
+            output += "Trim: '" + text.trim() + "'\n";
+            output += "Length: " + text.length + "\n";
+            output += "Uppercase: " + text.toUpperCase() + "\n";
+            output += "Lowercase: " + text.toLowerCase() + "\n";
+            output += "Substring(1, 5): " + text.substring(1, 5) + "\n";
+            output += "Replace('JavaScript', 'JS'): " + text.replace("JavaScript", "JS") + "\n";
+            document.getElementById("stringOutput").textContent = output;
+        }
+
+        function showMathFunctions() {
+            let output = "";
+            output += "Math.PI: " + Math.PI + "\n";
+            output += "Math.sqrt(16): " + Math.sqrt(16) + "\n";
+            output += "Math.pow(2, 3): " + Math.pow(2, 3) + "\n";
+            output += "Math.round(4.6): " + Math.round(4.6) + "\n";
+            output += "Math.floor(4.9): " + Math.floor(4.9) + "\n";
+            output += "Math.ceil(4.1): " + Math.ceil(4.1) + "\n";
+            output += "Math.random(): " + Math.random() + "\n";
+            document.getElementById("mathOutput").textContent = output;
+        }
+    </script>
+
+</body>
+</html>
